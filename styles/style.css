@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #0b0b0f;
+  --bg-color: #0A0808;
   --main-color: #f6f7f1;
   --highlight-color: #2833FF;
   --accent-color: #00D002;
@@ -19,6 +19,27 @@ body {
   background-color: var(--bg-color);
 }
 
+.section1, .section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+.accent {
+  color: var(--accent-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .navbar {
   /* background-color: var(--bg-color); */
   border-bottom: 1px solid var(--highlight-color);
@@ -35,7 +56,6 @@ body {
 
 .my-nav-bg {
   background-color: var(--bg-color);
-
 }
 
 .my-nav {
@@ -51,12 +71,22 @@ body {
   color: var(--accent-color);
 }
 
-.wrapper {
+.content-wrapper {
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   color: var(--main-color);
+  font-family: "Inter", sans-serif;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/767/original/hero.png?1769785612);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3, h4 {
   font-family: "Cousine", monospace;
 }
 
@@ -66,12 +96,11 @@ body {
   justify-content: space-evenly;
   align-items: center;
   min-height: 93.4vh;
+  position: fixed;
   /* border: 2px dotted blue; */
 }
 
-.hero, .projects {
-  position: relative;
-}
+
 
 .hero-content-container {
   display: flex;
@@ -139,6 +168,15 @@ body {
   padding: 25px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  width: 95%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
 .projects {
   display: flex;
   justify-content: center;
@@ -163,9 +201,11 @@ body {
   display: flex;
   align-self: end;
   padding-left: 55px;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/766/original/1_1_%281%29_2.png?1769785065);
+  width: 250px;
   color: var(--main-color);
-  border-bottom: 1px solid var(--main-color);
-  opacity: 0.4;
+  /* border-bottom: 1px solid var(--main-color); */
+  /* opacity: 0.4; */
   font-weight: 200;
   font-size: 14px;
 }
@@ -173,7 +213,7 @@ body {
 .project-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
   justify-content: center;
   align-items: center;
 }
@@ -265,6 +305,98 @@ body {
 .abt-img-gap {
   gap: 0px;
 }
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+  width: 90%;
+}
+
+.service-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.service-number {
+  background-color: var(--highlight-color);
+  padding: 8px 13px;
+  border-radius: 4px;
+  border: 1px solid #8E94FA;
+}
+
+.service-card {
+  padding: 30px;
+  background-color: var(--bg-color);
+  border: 1px solid #807F7F;
+  width: 80%;
+  transition: all 300ms ease;
+}
+
+.service-descr-text {
+  width: 100%;
+}
+
+.service-card:hover {
+  padding: 30px;
+  background-color: var(--highlight-color);
+  border: 1px solid #807F7F;
+  width: 80%;
+}
+
+footer {
+  /* background-color: var(--bg-color); */
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-ripped {
+  background-image: url(/peregrine-portfolio-site/img/divider.png);
+  background-position: center;
+  height: 103px;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.logo {
+  width: 150px;
+}
+
+
 
 @media all and (max-width: 932px) {
   .hero-content-container {
