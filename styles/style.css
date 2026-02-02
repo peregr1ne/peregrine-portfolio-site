@@ -476,6 +476,15 @@ footer {
   padding: 15px;
 }
 
+.footer-text {
+  font-size: 12px;
+}
+
+.footer-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
 .logo {
   width: 150px;
 }
