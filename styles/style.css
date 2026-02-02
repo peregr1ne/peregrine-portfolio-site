@@ -29,6 +29,9 @@ body {
   position: relative;
 }
 
+.section2 {
+  width: 90%
+}
 
 .accent {
   color: var(--accent-color);
@@ -168,6 +171,67 @@ h1, h2, h3, h4 {
   padding: 25px;
 }
 
+.mouse {
+  width: 35px;
+  height: 60px;
+  border: 1px solid #f6f7f085;
+  border-radius: 60px;
+  position: relative;
+    -webkit-animation: beat 5s infinite;
+	&::before {
+		content: '';
+		width: 9px;
+		height: 9px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #f6f7f085;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@keyframes beat {
+  0%   {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+  50%  {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+  }
+  100%  {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -208,6 +272,13 @@ main {
   /* opacity: 0.4; */
   font-weight: 200;
   font-size: 14px;
+  justify-content: center;
+  align-content: center;
+  padding-top: 14px;
+  font-family: 'Cousine';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 22px;
 }
 
 .project-cards-container {
@@ -216,13 +287,21 @@ main {
   gap: 60px;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
 
 .project-card {
   display: flex;
   gap: 24px;
   padding: 15px;
-  width: 90%;
+  width: 82%;
+}
+
+.project-card:hover {
+  background-color: var(--highlight-color);
+  transition: all 300ms ease;
+  transform: scale(1.01);
+  border-radius: var(--buttons-border-radius);
 }
 
 .project-card.reverse {
@@ -262,10 +341,12 @@ main {
 .project-tech-text {
   padding: 10px 20px;
   border: 1px solid var(--highlight-color);
+  background-color: var(--bg-color);
   text-align: center;
   width: 100%;
   transition: all 300ms ease;
 }
+
 
 .project-tech-text a {
   color: var(--main-color);
@@ -351,6 +432,7 @@ main {
   border: 1px solid #807F7F;
   width: 80%;
   transition: all 300ms ease;
+  border-radius: var(--buttons-border-radius);
 }
 
 .service-descr-text {
@@ -371,6 +453,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 25px;
 }
 
 .footer-ripped {
@@ -390,10 +473,16 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 85%;
+  padding: 15px;
 }
 
 .logo {
   width: 150px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
 }
 
 
