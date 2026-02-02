@@ -611,6 +611,57 @@ footer {
   .abt-img-gap {
     gap: 10px;
   }
+
+  main {
+    width: 100%;
+  }
+
+  .services {
+    padding: 10px;
+  }
+
+  .services-container {
+    padding: 0;
+  }
+
+  .services-card-container {
+    width: 100%;
+    padding: 25px 1px;
+    flex-direction: column;
+  }
+
+  .service-card {
+    width: 100%;
+    padding: 10px
+  }
+
+  .service-card:hover {
+    width: 100%;
+  }
+
+  .project-field {
+    align-self: center;
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background-image: none;
+  }
+
+  .footer-ripped {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
 }
 
 @media all and (max-width: 375px) {
