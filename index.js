@@ -1,3 +1,5 @@
+// simple timeout animation for servicecard
+
 const cards = document.querySelectorAll('.service-card');
 
   const observer = new IntersectionObserver((entries) => {
