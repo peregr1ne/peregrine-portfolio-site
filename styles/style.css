@@ -438,17 +438,56 @@ main {
   /* animation: fadeUp 0.8s ease forwards; */
 }
 
-/* .service-card:nth-child(1) {
-  animation-delay: 0.2s;
+.file {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/906/original/separator.png?1770285216);
+  background-position: center;
+  height: 286px;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
-.service-card:nth-child(2) {
-  animation-delay: 0.4s;
+.running-line-services {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+   /* position: relative; */
 }
 
-.service-card:nth-child(3) {
-  animation-delay: 0.6s;
-} */
+.running-track {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  /* position: absolute; */
+}
+
+.running-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  /* padding-right: 40px; */
+  flex-shrink: 0;
+}
+
+
+.run-service-img {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/907/original/Line.png?1770285332);
+  background-position: center;
+  height: 43px;
+  background-repeat: no-repeat;
+  width: 43px;
+}
+
 
 .service-card.visible {
   animation: fadeUp 0.8s ease forwards;
@@ -538,6 +577,51 @@ footer {
   gap: 10px;
 }
 
+@media all and (max-width: 1180px) {
+  .project-card {
+    flex-direction: column;
+    padding: 25px 0px;
+    width: 100%;
+  }
+
+  .project-card.reverse {
+    flex-direction: column;
+  }
+
+  .project-card-buttons__items {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .services-container {
+    padding: 0;
+  }
+
+  .services-card-container {
+    flex-direction: column;
+    padding: 25px 0px;
+    width: 100%;
+  }
+
+  .footer-ripped {
+    width: 100%;
+  }
+
+  .footer-container {
+    width: 95%;
+  }
+
+  .footer-text {
+    align-self: end;
+  }
+
+  .social-icons img {
+    height: 35px;
+    width: 35px;
+  }
+
+}
+
 
 
 @media all and (max-width: 932px) {
@@ -579,6 +663,24 @@ footer {
 
   .project-card-buttons {
     font-size: 12px;
+  }
+
+  .logo-place img {
+    height: 30px;
+    width: 120px;
+  }
+
+  .footer-container {
+    width: 95%;
+  }
+
+  .footer-text {
+    align-self: end;
+  }
+
+  .social-icons img {
+    height: 25px;
+    width: 25px;
   }
 
 }
@@ -625,6 +727,14 @@ footer {
 
   .project-cards-container {
     padding-top: 25px;
+  }
+
+  .projects {
+    padding: 10px;
+  }
+
+  .projects-container {
+    padding: 25px 10px;
   }
 
   .project-card {
@@ -692,6 +802,7 @@ footer {
   }
 
   .footer-ripped {
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/924/original/divider-mob.png?1770293176);
     width: 100%;
   }
 
