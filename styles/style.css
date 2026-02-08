@@ -730,7 +730,12 @@ footer.works {
 
   .graphic-project-cards-container {
     flex-direction: column;
-}
+  }
+
+  .design-project-card {
+    width: 100%;
+  }
+
 }
 
 @media all and (max-width: 932px) {
@@ -811,9 +816,6 @@ footer.works {
   .about-horiz-mob {
     display: block;
   }
-
-
-
 }
 
 @media all and (max-width: 440px) {
@@ -964,11 +966,10 @@ footer.works {
     width: 100%;
   }
 
-
-
   .about-horiz-mob {
     display: block;
   }
+
 }
 
 @media all and (max-width: 375px) {
