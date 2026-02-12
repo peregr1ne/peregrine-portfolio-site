@@ -57,6 +57,10 @@ body {
   z-index: 1;
 }
 
+.navbar-brand {
+  width: 20%;
+}
+
 .nav-link.active {
   color: var(--accent-color);
 }
@@ -66,11 +70,20 @@ body {
 }
 
 .my-nav {
-  justify-content: center;
+  width: 60%;
+  flex-shrink: 0;
+  flex: 1;
 }
 
 .my-nav-gap {
+  width: 100%;
   gap: 20px;
+  justify-content: center;
+}
+
+.nav-bar-btn {
+  display: flex;
+  width: 20%;
 }
 
 .hero-accent {
@@ -527,6 +540,8 @@ footer {
   justify-content: center;
   align-items: center;
   padding-top: 25px;
+  padding-bottom: 25px;
+  gap: 40px;
 }
 
 .footer-ripped {
@@ -545,8 +560,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
-  padding: 15px;
+  width: 80%;
+  padding: 20px;
 }
 
 .footer-text {
@@ -561,6 +576,7 @@ footer {
 .logo {
   width: 150px;
 }
+
 
 .social-icons {
   display: flex;
@@ -684,6 +700,96 @@ footer.works {
 }
 
 
+/* contact page */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  padding: 20px 25px;
+}
+
+.contact-content-container {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 170px;
+  width: 80%;
+}
+
+.contact-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; 
+  width: 60%;  
+}
+
+.contact-page-accent {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  text-transform: uppercase;
+  width: 90%;
+  text-align: center;
+}
+
+.links-title-text {
+  font-family: "Cousine", monospace;
+  font-size: 20px;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.contact-right-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-email {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 100%; */
+  justify-content: center;
+}
+
+.main-btn .contact-page-btn {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+@media all and (max-width: 1664px) {
+  .contact-page-accent {
+    font-size: 90px;
+  }
+}
+
 
 @media all and (max-width: 1180px) {
   .project-card {
@@ -736,9 +842,44 @@ footer.works {
     width: 100%;
   }
 
+  .contact-page {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .contact-content-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+  }
+
+  .contact-left-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-page-accent {
+    font-size: 60px;
+    width: 100%;
+  }
+
+  .links-title-text {
+    font-size: 16px;
+  }
+
+  .contact-right-container {
+    width: 100%;
+    align-items: center;
+  }
 }
 
+
 @media all and (max-width: 932px) {
+  .nav-bar-btn {
+    justify-content: end;
+  }
+
   .hero-content-container {
     padding: 25px;
   }
@@ -816,6 +957,12 @@ footer.works {
   .about-horiz-mob {
     display: block;
   }
+
+  .contact-links {
+    gap: 20px;
+  }
+
+
 }
 
 @media all and (max-width: 440px) {
@@ -943,12 +1090,23 @@ footer.works {
     width: 100%;
   }
 
+  footer {
+    gap: 0;
+  }
+
   .footer-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
   }
+
+  .logo-place {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
   .footer-text {
     text-align: center;
@@ -970,18 +1128,54 @@ footer.works {
     display: block;
   }
 
+  .contact-page {
+    padding: 20px;
+  }
+
+  .contact-content-container {
+    padding: 0;
+  }
+
 }
 
+/* @media all and (max-width: 390px) {
+  .contact-page {
+    padding: 20px;
+  }
+} */
+
 @media all and (max-width: 375px) {
-  /* .hero {
-    padding: 8px;
-  } */
   .hero-content-container {
     padding: 2px;
   }
 
   .hero-accent {
-        font-size: 12px;
+    font-size: 12px;
   }
-  
+}
+
+@media all and (max-width: 360px) {
+  .contact-page {
+    padding: 0;
+  }
+
+  .contact-page-accent {
+    font-size: 30px;
+  }
+
+  .contact-right-container {
+    padding: 0 20px;
+  }
+
+  .contact-links {
+    gap: 10px;
+  }
+
+  .links-title-text, p, .contact-email {
+    font-size: 14px;
+  }
+
+  .contact-button-container {
+    width: 80%;
+  }
 }
