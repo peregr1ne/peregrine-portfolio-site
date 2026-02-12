@@ -23,7 +23,7 @@ body {
   width: 100%;
 }
 
-.section1, .section2 {
+.section1, .main-holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@ body {
   position: relative;
 }
 
-.section2 {
+.main-holder {
   width: 90%
 }
 
@@ -45,6 +45,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
+  justify-content: space-between;
+  background: red;
 }
 
 .navbar {
@@ -57,7 +60,7 @@ body {
   z-index: 1;
 }
 
-.navbar-brand {
+.nav-logo {
   width: 20%;
 }
 
@@ -117,7 +120,6 @@ h1, h2, h3, h4 {
   align-items: center;
   min-height: 93.4vh;
   position: fixed;
-  /* border: 2px dotted blue; */
 }
 
 .hero-content-container {
@@ -589,8 +591,7 @@ footer {
   }
 
 
-/* about-me-page */
-
+/* about me page */
 .about-content-wrapper {
   display: flex;
   flex-direction: column;
@@ -613,7 +614,6 @@ footer {
   margin: 60px auto;
   align-items: center;
 }
-
 
 .about-content {
   display: flex;
@@ -661,7 +661,6 @@ footer {
   text-align: center;
 }  
 
-
 /* works page */
 .works-content-wrapper {
   background-color: var(--bg-color);
@@ -704,10 +703,6 @@ footer.works {
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color);
-  color: var(--main-color);
-  font-family: "Inter", sans-serif;
-  min-height: 100vh;
   align-items: center;
 }
 
@@ -715,7 +710,6 @@ footer.works {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px auto;
   padding: 20px 25px;
 }
 
@@ -724,7 +718,6 @@ footer.works {
   padding: 20px;
   align-items: center;
   gap: 170px;
-  width: 80%;
 }
 
 .contact-left-container {
@@ -783,6 +776,11 @@ footer.works {
   align-items: center;
   text-align: center;
 }
+
+.contact-page a {
+  text-decoration: none;
+}
+
 
 @media all and (max-width: 1664px) {
   .contact-page-accent {
